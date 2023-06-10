@@ -21,3 +21,12 @@
   align-items: center;
   justify-content: center;
 }
+
+
+.heroLogoImg {
+  background-color: #FFF;
+  border-radius: 24px;
+  height: 168px;
+  width: 168px;
+  padding: 12px;
+}
