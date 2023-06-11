@@ -43,8 +43,8 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title} - a Function as a Service (FaaS) and serverless platform`}
+      description="a Function as a Service (FaaS) and serverless platform">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
