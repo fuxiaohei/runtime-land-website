@@ -20,9 +20,14 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <p>
             <Link
+              className="button button--primary button--lg margin-right--lg"
+              to="https://dash.runtime.land/">
+              Start your project
+            </Link>
+            <Link
               className="button button--secondary button--lg"
               to="/docs/intro">
-              Start By One Line
+              Documentation
             </Link>
           </p>
         </div>

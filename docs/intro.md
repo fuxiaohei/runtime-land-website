@@ -1,47 +1,25 @@
 ---
 sidebar_position: 1
+sidebar_label: "Introduction"
 ---
 
-# Tutorial Intro
+# Introduction
 
-Let's discover **Docusaurus in less than 5 minutes**.
+**Runtime.land** is a Function as a Service (FaaS) and serverless platform that leverages WebAssembly (Wasm) technology along with the power of [Wasmtime](https://wasmtime.dev/) and [Rust](https://www.rust-lang.org/). It provides developers with a seamless and efficient environment to deploy and run their functions in a serverless architecture.
 
-## Getting Started
+Runtime.land is deeply integrated with WebAssembly. WebAssembly (Wasm) offers significant advances in web development, including near-native performance, platform portability, language agnosticism, enhanced security through sandboxing, a growing ecosystem of tools and libraries, interoperability with many languagues, and powerful performance profiling capabilities. Wasmtime is a high-performance runtime for WebAssembly, optimized for speed and security.
 
-Get started by **creating a new site**.
+Runtime.land is enabled to self-deployment on docker and k8s environments. Developers have the freedom to deploy their own instances of the platform, giving them full control over their serverless environment. 
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## Next Steps
 
-### What you'll need
+Now you got the taste, it's time to create your first application:
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+- [Install runtime.land command line](/docs/get-started/install)
+- [Create your first project](/docs/get-started/create-project)
+- [Run your project](/docs/get-started/run-project)
+- [Deploy your project](/docs/get-started/deploy-project)
 
-## Generate a new site
+## Self Hosting
 
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+If you want to host your own instance of Runtime.land, you can follow the [self-hosting guide](/docs/self-hosting).

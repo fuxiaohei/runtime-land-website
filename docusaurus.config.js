@@ -42,14 +42,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/fuxiaohei/runtime.land/tree/gh-pages/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/fuxiaohei/runtime.land/tree/gh-pages',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -77,6 +77,11 @@ const config = {
             label: 'Docs',
           },
           { to: '/blog', label: 'Blog', position: 'right' },
+          {
+            href: 'https://dash.runtime.land',
+            label: 'Cloud',
+            position: 'right',
+          },
           {
             href: 'https://github.com/fuxiaohei/runtime.land',
             label: 'GitHub',
