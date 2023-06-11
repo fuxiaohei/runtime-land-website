@@ -22,4 +22,4 @@ Now you got the taste, it's time to create your first application:
 
 ## Self Hosting
 
-If you want to host your own instance of Runtime.land, you can follow the [self-hosting guide](/docs/self-hosting).
+If you want to host your own instance of Runtime.land, you can follow the [self-hosting guide](/docs/category/self-hosting).
