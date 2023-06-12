@@ -30,3 +30,17 @@
   width: 168px;
   padding: 12px;
 }
+
+.underConstructionContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.underConstruction {
+  width: 50%;
+  min-width: 240px;
+  border-left: 0;
+  font-weight: bold;
+}
