@@ -18,11 +18,11 @@ const FeatureList = [
     ),
   },
   {
-    title: "Edge and Cloud",
+    title: "Cloud and Local",
     Svg: require("@site/static/img/cloud-edge.svg").default,
     description: (
       <>
-        Run function in the cloud or on the edge.
+        Run function in the cloud or on the local.
       </>
     ),
   },

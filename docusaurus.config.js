@@ -7,7 +7,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Runtime.land",
-  tagline: "A serverless cloud development platform based on Wasm",
+  tagline: "A tiny Function as a Service (FaaS) platform on Wasm",
   favicon: "img/runtime-land-fav-144.ico",
 
   // Set the production url of your site here
