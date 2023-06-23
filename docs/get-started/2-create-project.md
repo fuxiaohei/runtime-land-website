@@ -15,18 +15,19 @@ If you've installed `land-cli`, you can generate a project from *rust-basic* tem
 land-cli init <your-project-name>
 ```
 
-## The project manifest
+## The project metedata
 
-`Manifest` describes the project's metadata, such as the project's name, description, and the building target of the project.
+`Metadata` describes the project's metadata, such as the project's name, description, and the building target of the project.
 
-The `manifest` file is located at the root of the project, and it's named `meta.toml`.
+The `metadata` file is located at the root of the project, and it's named `meta.toml`.
 
 ```toml title=meta.toml
 manifest = "v1"
 # The project's name
-name = "rust-basic"
-# The project's deployment name
-project = "rust-basic-example"
+name = "<your-project-name>"
+# The project's deployment name, it's auto-generated with random string.
+# If this project is production deployed, it will generate domain <your-project-name>-lavender-559.runtime.lol to access.
+project = "<your-project-name>-lavender-559"
 # The project's description
 description = "example rust project"
 authors = []

@@ -1,17 +1,5 @@
-endi:
-  name: Endilie Yacop Sucipto
-  title: Maintainer of Docusaurus
-  url: https://github.com/endiliey
-  image_url: https://github.com/endiliey.png
-
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
-
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
+fuxiaohei:
+  name: Fuxiaohei
+  title: Maintainer of Runtime.land
+  url: https://github.com/fuxiaohei
+  image_url: https://secure.gravatar.com/avatar/f72f7454ce9d710baa506394f68f4132?s=400&r=pg

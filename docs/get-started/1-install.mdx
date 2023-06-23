@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: "Install"
+sidebar_label: "Install Cli"
 ---
 
 import Tabs from '@theme/Tabs';
@@ -12,34 +12,25 @@ This document describes how to install the `land-cli` command line tool.
 
 ## Pre-requisites
 
+:::tip
+
 - `land-cli` requires Rust 1.68 or later
-- `rustup target add wasm32-wasi` is required to build the `land-cli` project webassembly binary
-- TODO: `cargo install wizer` is required to build the `land-cli` javascript project binary
+- `rustup target add wasm32-wasi` is required to build the webassembly binary
+
+:::
 
 ## Install
 
-`land-cli` runs on Linux (amd64 and arm64), macOS (TODO: Intel and Apple Silicon), and Windows (TODO: amd64)
+`land-cli` runs on Linux (x86_64 and aarch64), macOS (x86_64 and aarch64). Windows is not tested yet.
 
 <Tabs>
   <TabItem value="linux" label="Linux" default>
 <p>The easiest is to use the installer script, hosted on this site:</p>
 
-```bash
-(TODO:)
-curl -fsSL https://runtime.land/install-cli.sh | bash
-```
-
-It’s highly recommended to add `land-cli` to a folder, which is on your path, e.g.:
+If you have `cargo` installed.
 
 ```bash
-sudo mv land-cli /usr/local/bin/
-```
-
-It can install `land-cli` to your path automatically, if you have `cargo` installed.
-
-```bash
-(TODO:)
-cargo install land-cli
+cargo install land-cli --git https://github.com/fuxiaohei/runtime.land
 ```
 
 After installing, you can check if it was successful by running:
@@ -51,30 +42,10 @@ land-cli --version
   </TabItem>
   <TabItem value="macos" label="MacOS">
 
-<p>The easiest is to use `brew` to install `land-cli`:</p>
+If you have `cargo` installed.
 
 ```bash
-(TODO:)
-brew install runtime-land/tap/land-cli
-```
-The installer script can also be used, hosted on this site:
-
-```bash
-(TODO:)
-curl -fsSL https://runtime.land/install-cli.sh | bash
-```
-
-It’s highly recommended to add `land-cli` to a folder, which is on your path, e.g.:
-
-```bash
-sudo mv land-cli /usr/local/bin/
-```
-
-It can install `land-cli` to your path automatically, if you have `cargo` installed.
-
-```bash
-(TODO:)
-cargo install land-cli
+cargo install land-cli --git https://github.com/fuxiaohei/runtime.land
 ```
 
 After installing, you can check if it was successful by running:
@@ -86,11 +57,11 @@ land-cli --version
   </TabItem>
   <TabItem value="windows" label="Windows">
 
-If using Windows (PowerShell / cmd.exe), you can download [the Windows binary release](#install).
+:::caution
 
-Unzip the archive and place the `land-cli.exe` file in your system path.
+Windows binary is not available yet.
 
-If you want to use WSL2 (Windows Subsystem for Linux 2), please follow the instructions for using Linux.
+:::
 
   </TabItem>
 </Tabs>
@@ -98,18 +69,10 @@ If you want to use WSL2 (Windows Subsystem for Linux 2), please follow the instr
 
 ## Building from source
 
-`land-cli` use grpc to communicate with the server, so you need to install the grpc dependencies:
-
-```bash
- sudo apt install -y protobuf-compiler libprotobuf-dev
-```
-
 Then clone the source code and build it:
 
 ```bash
 git clone https://github.com/fuxiaohei/runtime.land
-make build-cli
-(TODO:)
-make install-cli # optional, add land-cli to your path
+cargo install --locked --path .
+land-cli --help
 ```
-

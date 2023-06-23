@@ -5,7 +5,7 @@ sidebar_label: "Deploy Project"
 
 # Deploy Project
 
-After local buiding and test serving, you can deploy your project to the cloud. But `land-cli` need an access-token to deploy your project. You can create one from [here](https://dash.runtime.land/settings#access-tokens).
+After local buiding and test serving, you can deploy your project to the cloud. But `land-cli` need an access-token to deploy your project. You can create one from [here](https://web.runtime.land/settings#access-token).
 
 Then run `land-cli` with the access-token:
 
@@ -13,19 +13,19 @@ Then run `land-cli` with the access-token:
 land-cli deploy --token <your-access-token>
 # output
 View at:
-    https://rust-basic-example-ayp1zufcb44g.runtime.lol
+    https://<your-project-name>-lavender-559-ayp1zufcb44g.runtime.lol
 ```
 
 It deploys your project to the cloud and returns a URL. You can visit it to test your project.
 
-But the deployment is set as **Preview** mode. It means that the deployment needs a URL with random suffix from your project name. You can set it to **Production** mode by running the following command:
+This deployment is set as **Preview** mode. It means that the deployment needs a URL with random suffix from your project name. You can publish it to **Production** mode by running the following command:
 
 ```bash
 land-cli deploy --token <your-access-token> --production
 
 #output
 View at:
-    https://rust-basic-example.runtime.lol
+    https://<your-project-name>-lavender-559.runtime.lol
 ```
 
 ## Production vs Preview

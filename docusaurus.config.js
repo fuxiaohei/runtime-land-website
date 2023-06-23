@@ -41,13 +41,12 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/fuxiaohei/runtime.land/tree/gh-pages/",
+          editUrl: "https://github.com/fuxiaohei/runtime.land.web/tree/main",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/fuxiaohei/runtime.land/tree/gh-pages",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -76,7 +75,7 @@ const config = {
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://dash.runtime.land",
+            href: "https://web.runtime.land",
             label: "Dashboard",
             position: "right",
           },
@@ -98,8 +97,8 @@ const config = {
                 to: "/docs/intro",
               },
               {
-                label: "Get Started",
-                to: "/docs/category/get-started",
+                label: "Getting Started",
+                to: "/docs/category/getting-started",
               },
             ],
           },

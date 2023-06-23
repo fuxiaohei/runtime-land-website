@@ -9,7 +9,13 @@ sidebar_label: "Introduction"
 
 Runtime.land is deeply integrated with WebAssembly. WebAssembly (Wasm) offers significant advances in web development, including near-native performance, platform portability, language agnosticism, enhanced security through sandboxing, a growing ecosystem of tools and libraries, interoperability with many languagues, and powerful performance profiling capabilities. Wasmtime is a high-performance runtime for WebAssembly, optimized for speed and security.
 
-Runtime.land is enabled to self-deployment on docker and k8s environments. Developers have the freedom to deploy their own instances of the platform, giving them full control over their serverless environment. 
+Runtime.land is enabled to self-deployment on docker and k8s environments. Developers have the freedom to deploy their own instances of the platform, giving them full control over their serverless environment.
+
+:::tip
+
+Runtime.land is a personal project of [Fuxiaohei](https://github.com/fuxiaohei), and is currently in the early stages of development. It is not yet ready for production use.
+
+:::
 
 ## Next Steps
 
