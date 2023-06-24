@@ -8,6 +8,7 @@ sidebar_label: "Docker compose"
 Runtime.land uses docker compose to develop in local. You can use the following command to start:
 
 ```bash
+docker network create land_serverless_network --driver bridge
 docker compose -f deploy/docker-compose/docker-compose.yml up -d
 ```
 
@@ -17,7 +18,9 @@ Then you can visit `http://web.127-0-0-1.nip.io` to access the runtime.land dash
 
 :::tip
 
-In local, Rutime.land use [traefik](https://traefik.io/) to proxy the requests to different services. You can visit `http://traefik.127-0-0-1.nip.io` to access the traefik dashboard page. The default username and password is `admin` and `admin`.
+Rutime.land use [traefik](https://traefik.io/) to proxy requests to services.
+You can visit `http://traefik.127-0-0-1.nip.io` to access the traefik dashboard page.
+The default username and password is `admin` and `admin`.
 
 :::
 

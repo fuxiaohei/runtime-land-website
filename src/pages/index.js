@@ -37,6 +37,7 @@ function HomepageHeader() {
             </Link>
           </p>
         </div>
+        {/** 
         <div className={styles.underConstructionContainer}>
           <div className={styles.underConstruction}>
             <Admonition type="caution">
@@ -49,6 +50,7 @@ function HomepageHeader() {
             </Admonition>
           </div>
         </div>
+        */}
       </div>
     </header>
   );
