@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Runtime.land",
   tagline: "A tiny Function as a Service (FaaS) platform on Wasm",
-  favicon: "img/runtime-land-fav-144.ico",
+  favicon: "img/logo-v2-small.ico",
 
   // Set the production url of your site here
   url: "https://runtime.land",
@@ -64,7 +64,7 @@ const config = {
         title: "Runtime.land",
         logo: {
           alt: "runtime-land-logo",
-          src: "img/runtime-land-logo-240.svg",
+          src: "img/logo-v2-small.svg",
         },
         items: [
           {
@@ -125,7 +125,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Runtime.land. <br/> Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Runtime.land. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

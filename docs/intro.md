@@ -5,11 +5,11 @@ sidebar_label: "Introduction"
 
 # Introduction
 
-**Runtime.land** is a tiny Function as a Service (FaaS) platform that leverages WebAssembly (Wasm) technology along with the power of [Wasmtime](https://wasmtime.dev/) and [Rust](https://www.rust-lang.org/). It provides developers with a seamless and efficient environment to deploy and run their functions in a serverless architecture.
+**Runtime.land** is a lightweight Function as a Service (FaaS) platform that harnesses the capabilities of WebAssembly (Wasm) technology, powered by [Wasmtime](https://wasmtime.dev/) and [Rust](https://www.rust-lang.org/). This platform offers developers a seamless and highly efficient environment to effortlessly deploy and execute their functions within a serverless architecture.
 
-Runtime.land is deeply integrated with WebAssembly. WebAssembly (Wasm) offers significant advances in web development, including near-native performance, platform portability, language agnosticism, enhanced security through sandboxing, a growing ecosystem of tools and libraries, interoperability with many languagues, and powerful performance profiling capabilities. Wasmtime is a high-performance runtime for WebAssembly, optimized for speed and security.
+Runtime.land is deeply intertwined with WebAssembly, capitalizing on its remarkable advancements in web development. WebAssembly (Wasm) brings forth a multitude of benefits, including near-native performance, seamless portability across platforms, enhanced security through sandboxing, an expanding ecosystem of tools and libraries, interoperability with numerous languages, and robust performance profiling capabilities. Powering Runtime.land is Wasmtime, a highly performant runtime specifically designed for WebAssembly, meticulously optimized for both speed and security.
 
-Runtime.land is enabled to self-deployment on docker and k8s environments. Developers have the freedom to deploy their own instances of the platform, giving them full control over their serverless environment.
+Runtime.land offers self-deployment capabilities on Docker and Kubernetes environments. Developers have the freedom to deploy and manage their own instances of the platform, providing them with complete control over their serverless environment.
 
 :::tip
 

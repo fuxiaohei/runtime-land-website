@@ -15,7 +15,7 @@ function HomepageHeader() {
         <div className="hero__logo">
           <img
             className={styles.heroLogoImg}
-            src="/img/runtime-land-logo-240.svg"
+            src="/img/logo-v2.svg"
             alt="runtime-land-logo"
           />
         </div>

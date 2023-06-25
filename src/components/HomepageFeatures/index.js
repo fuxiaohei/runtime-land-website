@@ -4,25 +4,25 @@ import styles from "./styles.module.css";
 
 const FeatureList = [
   {
-    title: "Supports Multiple Languages",
-    Svg: require("@site/static/img/files-support.svg").default,
-    description: <>Create project with multiple languages.</>,
+    title: "Support Multiple Languages",
+    Svg: require("@site/static/img/index-multiple-languages.svg").default,
+    description: <>Build functions with support for multiple programming languages.</>,
   },
   {
-    title: "Webassembly",
-    Svg: require("@site/static/img/webassembly.svg").default,
+    title: "WebAssembly",
+    Svg: require("@site/static/img/index-webassembly.svg").default,
     description: (
       <>
-        Webassembly sandbox for running untrusted code fast and securely.
+        Empower fast and secure execution of untrusted code with a WebAssembly sandbox.
       </>
     ),
   },
   {
-    title: "Cloud and Local",
-    Svg: require("@site/static/img/cloud-edge.svg").default,
+    title: "Local or Cloud",
+    Svg: require("@site/static/img/index-cloud-and-local.svg").default,
     description: (
       <>
-        Run function in the cloud or on the local.
+        Enable the flexibility to run the service either in the cloud or locally.
       </>
     ),
   },
