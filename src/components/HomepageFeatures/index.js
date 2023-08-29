@@ -18,11 +18,11 @@ const FeatureList = [
     ),
   },
   {
-    title: "Local or Cloud",
+    title: "Cloud Service",
     Svg: require("@site/static/img/index-cloud-and-local.svg").default,
     description: (
       <>
-        Enable the flexibility to run the service either in the cloud or locally.
+        Run your functions in the cloud provided by Runtime.land or run them locally.
       </>
     ),
   },

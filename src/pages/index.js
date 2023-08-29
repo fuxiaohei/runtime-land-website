@@ -6,6 +6,7 @@ import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Admonition from "@theme/Admonition";
 import styles from "./index.module.css";
+import GitHubButton from "react-github-btn";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -20,17 +21,32 @@ function HomepageHeader() {
           />
         </div>
         <h1 className="hero__title">{siteConfig.title}</h1>
+        <div className="margin-vert--md">
+          <GitHubButton
+            href="https://github.com/fuxiaohei/runtime-land"
+            data-icon="octicon-star"
+            data-size="large"
+            data-show-count="true"
+            aria-label="Star facebook/metro on GitHub"
+          >
+            Star
+          </GitHubButton>
+        </div>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p>
+          <a className="text--primary" target="_blank" href="https://github.com/fuxiaohei/runtime-land/releases">
+            Last stable release: 0.1.0</a>
+        </p>
         <div className={styles.buttons}>
           <p>
             <Link
-              className="button button--primary button--lg margin-right--lg"
-              to="https://web.runtime.land/"
+              className="button button--primary button--lg margin-vert--md margin-horiz--md"
+              to="https://dash.runtime.land/"
             >
               Start your project
             </Link>
             <Link
-              className="button button--secondary button--lg"
+              className="button button--secondary button--lg margin-vert--md margin-horiz--md"
               to="/docs/intro"
             >
               Documentation
