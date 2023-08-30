@@ -75,12 +75,12 @@ const config = {
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://web.runtime.land",
+            href: "https://dash.runtime.land",
             label: "Dashboard",
             position: "right",
           },
           {
-            href: "https://github.com/fuxiaohei/runtime.land",
+            href: "https://github.com/fuxiaohei/runtime-land",
             label: "GitHub",
             position: "right",
           },
@@ -97,8 +97,8 @@ const config = {
                 to: "/docs/intro",
               },
               {
-                label: "Getting Started",
-                to: "/docs/category/getting-started",
+                label: "Get Started",
+                to: "/docs/get-started",
               },
             ],
           },

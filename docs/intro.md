@@ -27,13 +27,12 @@ Runtime.land is built on top of cloud services, and is designed to be highly sca
 
 ## Architecture
 
+TODO!
 
 ## Next Steps
 
 Now you got the taste, it's time to create your first application:
 
 - [Get Started](/docs/get-started)
-- [Create your first project](/docs/get-started/create-project)
-- [Run your project](/docs/get-started/run-project)
-- [Deploy your project](/docs/get-started/deploy-project)
-
+- [Create your first project](/docs/create-project)
+- [Deploy your project](/docs/deploy-project)
