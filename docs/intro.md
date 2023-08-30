@@ -3,29 +3,37 @@ sidebar_position: 1
 sidebar_label: "Introduction"
 ---
 
-# Introduction
+# What is Runtime.land ?
 
-**Runtime.land** is a lightweight Function as a Service (FaaS) platform that harnesses the capabilities of WebAssembly (Wasm) technology, powered by [Wasmtime](https://wasmtime.dev/) and [Rust](https://www.rust-lang.org/). This platform offers developers a seamless and highly efficient environment to effortlessly deploy and execute their functions within a serverless architecture.
-
-Runtime.land is deeply intertwined with WebAssembly, capitalizing on its remarkable advancements in web development. WebAssembly (Wasm) brings forth a multitude of benefits, including near-native performance, seamless portability across platforms, enhanced security through sandboxing, an expanding ecosystem of tools and libraries, interoperability with numerous languages, and robust performance profiling capabilities. Powering Runtime.land is Wasmtime, a highly performant runtime specifically designed for WebAssembly, meticulously optimized for both speed and security.
-
-Runtime.land offers self-deployment capabilities on Docker and Kubernetes environments. Developers have the freedom to deploy and manage their own instances of the platform, providing them with complete control over their serverless environment.
+**Runtime.land** is a tiny Function as a Service (FaaS) platform powered by [Wasmtime](https://wasmtime.dev/) and [Rust](https://www.rust-lang.org/). This platform is designed to be lightweight, fast, and secure, providing developers with a simple and efficient way to deploy their functions.
 
 :::tip
 
-Runtime.land is a personal project of [Fuxiaohei](https://github.com/fuxiaohei), and is currently in the early stages of development. It is not yet ready for production use.
+Runtime.land is a personal project of [Fuxiaohei](https://github.com/fuxiaohei) now. It's developing and not ready for business use.
+
+If you want to use it as a business, please contact me by email: [fudong0797@gmail.com](mailto:fudong0797@gmail.com)
 
 :::
+
+## Key Features
+
+- Build and deploy functions in any language that compiles to WebAssembly
+
+WebAssembly is a portable, low-level bytecode that can be compiled from a variety of languages, including Rust, C/C++, Go, AssemblyScript, and many more. Runtime.land is developed in **Rust**, and is designed to support any language that compiles to WebAssembly.
+
+- Base on serverless cloud service
+
+Runtime.land is built on top of cloud services, and is designed to be highly scalable and cost-effective. In current stage, Runtime.land is deployed on [Zeabur](https://zeabur.com/) and Cloudflare R2. It will support more cloud services in the future.
+
+## Architecture
+
 
 ## Next Steps
 
 Now you got the taste, it's time to create your first application:
 
-- [Install runtime.land command line](/docs/get-started/install)
+- [Get Started](/docs/get-started)
 - [Create your first project](/docs/get-started/create-project)
 - [Run your project](/docs/get-started/run-project)
 - [Deploy your project](/docs/get-started/deploy-project)
 
-## Self Hosting
-
-If you want to host your own instance of Runtime.land, you can follow the [self-hosting guide](/docs/category/self-hosting).

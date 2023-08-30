@@ -1,0 +1,67 @@
+---
+sidebar_position: 11
+sidebar_label: "Get Started"
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Get Started
+
+## Step 1: Sign up
+
+To get started, you need to create an account in Zeabur. You will need a GitHub account to sign up. If you don't have one, you can create one for free at [GitHub](https://github.com/login).
+
+Go to [dashboard home page](https://dash.runtime.land), it will redirect to login page providered by [Clerk](https://clerk.com). You will see a button to sign up with GitHub. Click on the button, and you will be redirect to the GitHub authorization page. Click on the "Authorize" button to authorize Zeabur to access your GitHub account.
+
+![get-started-sign-up](/img/get-started/get-started-1.jpg)
+
+## Step 2: Create a deployment token
+
+Go to [Account](https://dash.runtime.land/account) page after login. You will see button [New Token] to create a deployment token.Type in a name for the token, and click on the "New Token" button. You will see a token string. Copy the token string and save it in a safe place. You will not be able to see the token string again after you leave this page.
+
+![get-started-create-a-deployment-token](/img/get-started/get-started-2.jpg)
+
+## Step 3: Install land-cli
+
+`land-cli` helps you to create, run and deploy your project. It's a command line tool. You can install it by following the instructions below.
+
+<Tabs>
+  <TabItem value="linux" label="Linux" default>
+<p>The easiest is to use the installer script, hosted on this site:</p>
+
+```bash
+curl https://runtime.land/install.sh -sSf | sh
+```
+
+After installing, you can check if it was successful by running:
+
+```bash
+land-cli --version
+```
+
+  </TabItem>
+  <TabItem value="macos" label="MacOS">
+<p>The easiest is to use the installer script, hosted on this site:</p>
+
+```bash
+curl https://runtime.land/install.sh -sSf | sh
+```
+
+After installing, you can check if it was successful by running:
+
+```bash
+land-cli --version
+```
+
+  </TabItem>
+  <TabItem value="windows" label="Windows">
+
+Download the latest version of `land-cli` from [GitHub](https://github.com/fuxiaohei/runtime-land/releases/) (not nightly) as `land-cli-v0.1.0-windows-amd64.zip`. Extract the zip file to a folder, and add the folder to your PATH environment variable.
+
+  </TabItem>
+</Tabs>
+
+## Step 4: Create and deploy your first project
+
+Read the [Create project](/docs/create-project) and [Deploy project](/docs/deploy-project) to create and deploy your first project.

@@ -53,20 +53,13 @@ function HomepageHeader() {
             </Link>
           </p>
         </div>
-        {/** 
         <div className={styles.underConstructionContainer}>
           <div className={styles.underConstruction}>
             <Admonition type="caution">
-              <p>
-                This project is developing. Do not use it in production.
-                <br />
-                Read more information about the project{" "}
-                <a href="docs/roadmap">roadmap</a>.
-              </p>
+              This site is under construction. Some docments may be not runnable.
             </Admonition>
           </div>
         </div>
-        */}
       </div>
     </header>
   );
