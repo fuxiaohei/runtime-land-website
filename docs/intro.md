@@ -10,8 +10,7 @@ sidebar_label: "Introduction"
 :::tip
 
 Runtime.land is a personal project of [Fuxiaohei](https://github.com/fuxiaohei) now. It's developing and not ready for business use.
-
-If you want to use it as a business, please contact me by email: [fudong0797@gmail.com](mailto:fudong0797@gmail.com)
+If you want to use it as a business, please contact me by [Email](mailto:fudong0797@gmail.com).
 
 :::
 

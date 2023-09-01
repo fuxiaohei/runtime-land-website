@@ -45,9 +45,9 @@ function HomepageHeader() {
           <p>
             <Link
               className="button button--primary button--lg margin-vert--md margin-horiz--md"
-              to="https://dash.runtime.land/"
+              to="/docs/get-started"
             >
-              Start your project
+              Get Started
             </Link>
             <Link
               className="button button--secondary button--lg margin-vert--md margin-horiz--md"
