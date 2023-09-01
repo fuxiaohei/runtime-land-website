@@ -33,9 +33,13 @@ function HomepageHeader() {
           </GitHubButton>
         </div>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <p>
-          <a className="text--primary" target="_blank" href="https://github.com/fuxiaohei/runtime-land/releases">
-            Last stable release: 0.1.0</a>
+        <p className="install-line">
+          <code className="install-line__code">
+            <span style={{ color: "#d1e6fa" }}>curl</span>
+            <span>&nbsp;https://runtime.land/install.sh</span>
+            <span style={{ color: "#ec9ea6" }}>&nbsp;-sSf</span>
+            <span>&nbsp;| bash</span>
+          </code>
         </p>
         <div className={styles.buttons}>
           <p>

@@ -43,10 +43,24 @@
 
 .main-wrapper {
   max-width: var(--ifm-container-width-xl);
-  margin: 2rem auto 0 auto;
+  margin: 1rem auto 0 auto;
 }
 
 div.navbar__inner {
   max-width: var(--ifm-container-width-xl);
   margin: auto;
+}
+
+.hero {
+  padding: 1rem 0 !important;
+}
+
+.install-line {
+  margin: 2rem auto;
+}
+
+.install-line__code {
+  padding: 1rem 3rem;
+  background-color: #2b303b;
+  color: #dadde1;
 }
