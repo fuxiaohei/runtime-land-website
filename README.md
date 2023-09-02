@@ -1,41 +1,36 @@
-# Website
+# Runtime.land Website
+
+<img src="static/img/logo-v2.svg" style="width: 100px;"/>
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
-### Installation
+## Run Dev Server
 
-```
-$ yarn
-```
+You will need Node >=16.14.
 
-### Local Development
+The first time, get all the dependencies loaded via
 
-```
-$ yarn start
+```bash
+npm install
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+in the root directory.
 
-### Build
+Then, run the server via
 
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
+```bash
+npm run start
 ```
 
-Not using SSH:
+## Publish the website
 
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
+This site is hosted on [Cloudflare Pages](https://pages.cloudflare.com/). You can publish the website by pushing to the `main` branch.
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+- [Cloudflare Pages](https://pages.cloudflare.com/)
+- [Cloudflare Pages Documentation](https://developers.cloudflare.com/pages/)
+- [Deploying Docusaurus Websites on Cloudflare Pages](https://developers.cloudflare.com/pages/framework-guides/deploy-a-docusaurus-site/)
+- [Cloudflare Pages URL](https://runtime-land-web.pages.dev/)
+
+## License
+
+Apache-2.0 License. See [LICENSE](LICENSE) file for details.

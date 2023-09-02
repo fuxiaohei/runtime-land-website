@@ -56,11 +56,67 @@ div.navbar__inner {
 }
 
 .install-line {
-  margin: 2rem auto;
+  margin: 1rem auto;
+  background-color: #2b303b;
+  color: #dadde1;
+  padding: 1rem;
+  border-radius: 1rem;
 }
 
 .install-line__code {
-  padding: 1rem 3rem;
   background-color: #2b303b;
-  color: #dadde1;
+}
+
+.hero_slogan,
+.hero_slogan_subtitle {
+  text-align: left;
+}
+
+.hero_slogan p {
+  margin-bottom: 0;
+  font-size: 3rem;
+  line-height: 4rem;
+}
+
+.hero_slogan_subtitle {
+  line-height: 4rem;
+  font-size: 1.5rem;
+}
+
+#header-container {
+  margin: 3rem;
+}
+
+#header-container .row {
+  justify-content: space-between;
+}
+
+#aside-container {
+  text-align: left;
+}
+
+#aside-container p {
+  margin-bottom: 1rem;
+}
+
+#aside-container .step {
+  font-weight: bold;
+}
+
+#github-button,
+#buttons-container {
+  text-align: left;
+}
+
+#features-container {
+  padding: 3rem 2rem;
+  border-top: 1px solid #dadde1;
+}
+
+.copy-button {
+  margin-left: 1rem;
+  background-color: transparent;
+  border: none;
+  color: #d1e6fa;
+  cursor: pointer;
 }
