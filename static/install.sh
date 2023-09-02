@@ -145,6 +145,8 @@ detect_profile() {
 
 USER_PROFILE="${PROFILE:-$(detect_profile)}"
 
+log_print 1 "Find user profile: $USER_PROFILE"
+
 build_profile_content() {
     if [ "$SHELLTYPE" = "fish" ]; then
         # fish uses a little different syntax to modify the PATH
@@ -178,11 +180,11 @@ update_profile(){
         echo "$PROFILE_CONTENT"
         return 1
     else
-        if ! command grep -qc 'RUNTIMELAND_HOME' "${USER_PROFILE}"; then
+        if grep -q 'RUNTIMELAND_HOME' "${USER_PROFILE}"; then
+            log_print 1 "Your profile ($USER_PROFILE) already add Runtime.land and has not been changed."
+        else
             log_print 1 "Adding runtime.land CLI to profile (${USER_PROFILE})"
             echo "$PROFILE_CONTENT" >> "$USER_PROFILE"
-        else
-            log_print 1 "Your profile ($USER_PROFILE) already add Runtime.land and has not been changed."
         fi
     fi
 }
