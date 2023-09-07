@@ -29,6 +29,7 @@ require() {
 require curl
 require tar
 require uname
+require xz
 
 log_print 0 "Checking for the latest version of runtime.land..."
 
@@ -104,6 +105,32 @@ extract_release() {
     tar -xzf "$DOWNLOAD_FILE" -C "$INSTALL_DIR"
 }
 extract_release
+
+install_wizer(){
+    local tmpdir=$(mktemp -d)
+    local wizer_version="v3.0.1"
+    local filename="wizer-${wizer_version}-${ARCH}-${OS}.tar.xz"
+    local download_file="$tmpdir/$filename"
+    local archive_url="https://github.com/bytecodealliance/wizer/releases/download/${wizer_version}/$filename"
+    log_print 1 "Downloading $archive_url"
+    curl --progress-bar --show-error --location --fail "$archive_url" \
+    --output "$download_file"
+    WIZER_DOWNLOAD_FILE="$download_file"
+    echo $WIZER_DOWNLOAD_FILE
+}
+
+# install wizer for js compilation
+install_wizer
+INSTALL_WIZER_DIR="$HOME/.runtimeland/wizer"
+
+extract_wizer_release() {
+    echo $WIZER_DOWNLOAD_FILE
+    log_print 1 "Extracting binary to $INSTALL_WIZER_DIR"
+    mkdir -p "$INSTALL_WIZER_DIR"
+    tar -xf "$WIZER_DOWNLOAD_FILE" -C "$INSTALL_WIZER_DIR"
+}
+
+extract_wizer_release
 
 # get the shell type
 SHELLTYPE="$(basename "/$SHELL")"
