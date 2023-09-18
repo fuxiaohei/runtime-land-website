@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+
+NIGHTLY=$1
+
 set -e pipefail
 
 # Colors for output
@@ -29,15 +32,14 @@ require() {
 require curl
 require tar
 require uname
-require xz
 
 log_print 0 "Checking for the latest version of runtime.land..."
 
 get_arch() {
     ARCH=$(uname -m)
     case $ARCH in
-        amd64) ARCH="amd64" ;;
-        x86_64) ARCH="amd64" ;;
+        amd64) ARCH="x86_64" ;;
+        x86_64) ARCH="x86_64" ;;
         aarch64) ARCH="aarch64" ;;
         riscv64) ARCH="riscv64" ;;
         arm64) ARCH="aarch64" ;; # This is for the macOS M1 ARM chips
@@ -72,7 +74,13 @@ get_latest_release() {
 
 get_arch
 get_os
-VERSION=$(get_latest_release)
+# if second args is nightly, use 'nightly' not lastest version
+if [ "$NIGHTLY" == "nightly" ]; then
+    VERSION="nightly"
+else
+    VERSION=$(get_latest_release)
+fi
+
 # if VERSION is empty, then exit
 if [ -z "${VERSION-}" ]; then
     log_print 2 "Failed to get the latest version of runtime.land"
@@ -81,14 +89,13 @@ fi
 
 log_print 1 "Fetching latest version of runtime.land for ${OS}-${ARCH}, version ${VERSION}"
 
-
 download_release() {
     local tmpdir=$(mktemp -d)
     local filename="land-cli-${VERSION}-${OS}-${ARCH}.tar.gz"
     local download_file="$tmpdir/$filename"
     local archive_url="https://github.com/fuxiaohei/runtime-land/releases/download/${VERSION}/$filename"
     
-    log_print 1 "Downloading $archive_url"
+    log_print 0 "Downloading $archive_url"
     curl --progress-bar --show-error --location --fail "$archive_url" \
     --output "$download_file"
     DOWNLOAD_FILE="$download_file"
@@ -100,37 +107,11 @@ download_release
 # extract_release
 INSTALL_DIR="$HOME/.runtimeland"
 extract_release() {
-    log_print 1 "Extracting binary to $INSTALL_DIR"
+    log_print 0 "Extracting binary to $INSTALL_DIR"
     mkdir -p "$INSTALL_DIR"
     tar -xzf "$DOWNLOAD_FILE" -C "$INSTALL_DIR"
 }
 extract_release
-
-install_wizer(){
-    local tmpdir=$(mktemp -d)
-    local wizer_version="v3.0.1"
-    local filename="wizer-${wizer_version}-${ARCH}-${OS}.tar.xz"
-    local download_file="$tmpdir/$filename"
-    local archive_url="https://github.com/bytecodealliance/wizer/releases/download/${wizer_version}/$filename"
-    log_print 1 "Downloading $archive_url"
-    curl --progress-bar --show-error --location --fail "$archive_url" \
-    --output "$download_file"
-    WIZER_DOWNLOAD_FILE="$download_file"
-    echo $WIZER_DOWNLOAD_FILE
-}
-
-# install wizer for js compilation
-install_wizer
-INSTALL_WIZER_DIR="$HOME/.runtimeland/wizer"
-
-extract_wizer_release() {
-    echo $WIZER_DOWNLOAD_FILE
-    log_print 1 "Extracting binary to $INSTALL_WIZER_DIR"
-    mkdir -p "$INSTALL_WIZER_DIR"
-    tar -xf "$WIZER_DOWNLOAD_FILE" -C "$INSTALL_WIZER_DIR"
-}
-
-extract_wizer_release
 
 # get the shell type
 SHELLTYPE="$(basename "/$SHELL")"
@@ -208,7 +189,7 @@ update_profile(){
         return 1
     else
         if grep -q 'RUNTIMELAND_HOME' "${USER_PROFILE}"; then
-            log_print 1 "Your profile ($USER_PROFILE) already add Runtime.land and has not been changed."
+            log_print 0 "Your profile ($USER_PROFILE) already add Runtime.land and has not been changed."
         else
             log_print 1 "Adding runtime.land CLI to profile (${USER_PROFILE})"
             echo "$PROFILE_CONTENT" >> "$USER_PROFILE"
